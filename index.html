@@ -86,6 +86,24 @@
         #lightbox.active { opacity: 1; pointer-events: auto; }
         #lightbox img { transform: scale(0.95); transition: transform 0.4s ease; }
         #lightbox.active img { transform: scale(1); }
+
+        /* Legal Modals */
+        .legal-modal {
+            opacity: 0; pointer-events: none; visibility: hidden; transition: all 0.4s ease;
+        }
+        .legal-modal.active {
+            opacity: 1; pointer-events: auto; visibility: visible;
+        }
+        .legal-modal-content {
+            transform: scale(0.95) translateY(10px); transition: all 0.4s ease;
+        }
+        .legal-modal.active .legal-modal-content {
+            transform: scale(1) translateY(0);
+        }
+        /* Custom scrollbar for modals */
+        .modal-scroll::-webkit-scrollbar { width: 6px; }
+        .modal-scroll::-webkit-scrollbar-track { background: transparent; }
+        .modal-scroll::-webkit-scrollbar-thumb { background: #D6CFC4; border-radius: 4px; }
     </style>
     
     <!-- Schema Markup -->
@@ -352,6 +370,72 @@
         <img id="lightbox-img" src="" alt="Προβολή Εικόνας" class="max-w-[90vw] max-h-[90vh] object-contain rounded-sm shadow-lg" onclick="event.stopPropagation()">
     </div>
 
+    <!-- Modals for Legal Pages -->
+    
+    <!-- Privacy Policy Modal -->
+    <div id="modal-privacy" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-privacy')">
+        <div class="legal-modal-content bg-ivory w-full max-w-2xl max-h-[90vh] flex flex-col rounded-xl shadow-2xl relative" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between p-6 border-b border-warmBeige/40 shrink-0">
+                <h3 class="text-2xl font-serif text-charcoal">Πολιτική Απορρήτου (GDPR)</h3>
+                <button onclick="closeModal('modal-privacy')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto modal-scroll space-y-5 text-charcoalLight font-light text-sm leading-relaxed">
+                <p>Η παρούσα Πολιτική Απορρήτου περιγράφει πώς συλλέγονται, χρησιμοποιούνται και προστατεύονται τα προσωπικά σας δεδομένα κατά την επίσκεψή σας στην ιστοσελίδα του <strong>Παναγιώτη Τάγαρη</strong>.</p>
+                <ul class="space-y-4 list-none pl-0">
+                    <li><strong class="text-charcoal font-medium">Συλλογή Δεδομένων:</strong> Δεδομένα συλλέγονται μόνο εάν επιλέξετε να επικοινωνήσετε μαζί μας (π.χ. μέσω μελλοντικής φόρμας επικοινωνίας ή email). Αυτά περιλαμβάνουν το ονοματεπώνυμο και τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας.</li>
+                    <li><strong class="text-charcoal font-medium">Σκοπός Επεξεργασίας:</strong> Τα στοιχεία σας χρησιμοποιούνται αποκλειστικά για την απάντηση στα αιτήματά σας και τον προγραμματισμό συνεδριών, εφόσον υπάρχει διαθεσιμότητα.</li>
+                    <li><strong class="text-charcoal font-medium">Εχεμύθεια & Ασφάλεια:</strong> Ως Ψυχολόγος, ο Παναγιώτης Τάγαρης δεσμεύεται από το <em>επαγγελματικό απόρρητο</em>. Τα δεδομένα σας δεν διαβιβάζονται σε τρίτους, εκτός εάν απαιτείται από τον νόμο.</li>
+                    <li><strong class="text-charcoal font-medium">Τα Δικαιώματά σας:</strong> Έχετε το δικαίωμα πρόσβασης, διόρθωσης ή διαγραφής των δεδομένων σας ανά πάσα στιγμή, στέλνοντας ένα σχετικό αίτημα στο email επικοινωνίας.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookies Policy Modal -->
+    <div id="modal-cookies" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-cookies')">
+        <div class="legal-modal-content bg-ivory w-full max-w-2xl max-h-[90vh] flex flex-col rounded-xl shadow-2xl relative" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between p-6 border-b border-warmBeige/40 shrink-0">
+                <h3 class="text-2xl font-serif text-charcoal">Πολιτική Cookies</h3>
+                <button onclick="closeModal('modal-cookies')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto modal-scroll space-y-5 text-charcoalLight font-light text-sm leading-relaxed">
+                <p>Η ιστοσελίδα μας χρησιμοποιεί "cookies" για τη βελτίωση της εμπειρίας πλοήγησης και την ανάλυση της επισκεψιμότητας.</p>
+                <p><strong class="text-charcoal font-medium">Τι είναι τα cookies:</strong> Μικρά αρχεία κειμένου που αποθηκεύονται στον περιηγητή σας.</p>
+                <p><strong class="text-charcoal font-medium">Είδη Cookies που χρησιμοποιούμε:</strong></p>
+                <ul class="space-y-2 list-disc list-inside pl-2">
+                    <li><strong class="text-charcoal font-medium">Απαραίτητα:</strong> Για τη σωστή λειτουργία της ιστοσελίδας.</li>
+                    <li><strong class="text-charcoal font-medium">Αναλυτικά (π.χ. Google Analytics):</strong> Μας βοηθούν να κατανοήσουμε πώς οι επισκέπτες αλληλεπιδρούν με το περιεχόμενο, συλλέγοντας ανώνυμες πληροφορίες.</li>
+                </ul>
+                <p><strong class="text-charcoal font-medium">Διαχείριση:</strong> Μπορείτε να τροποποιήσετε τις ρυθμίσεις του περιηγητή σας για να απορρίψετε ορισμένα ή όλα τα cookies. Σημειώστε ότι αυτό ενδέχεται να επηρεάσει τη λειτουργικότητα της ιστοσελίδας.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use Modal -->
+    <div id="modal-terms" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-terms')">
+        <div class="legal-modal-content bg-ivory w-full max-w-2xl max-h-[90vh] flex flex-col rounded-xl shadow-2xl relative" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between p-6 border-b border-warmBeige/40 shrink-0">
+                <h3 class="text-2xl font-serif text-charcoal">Όροι Χρήσης</h3>
+                <button onclick="closeModal('modal-terms')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto modal-scroll space-y-5 text-charcoalLight font-light text-sm leading-relaxed">
+                <p>Η χρήση της ιστοσελίδας υπόκειται στους παρακάτω όρους:</p>
+                <ul class="space-y-4 list-none pl-0">
+                    <li><strong class="text-charcoal font-medium">Ενημερωτικός Χαρακτήρας:</strong> Το περιεχόμενο της ιστοσελίδας (κείμενα, βιογραφικό, περιγραφές προσέγγισης) παρέχεται αποκλειστικά για ενημερωτικούς σκοπούς. <em>Δεν αποτελεί και δεν υποκαθιστά</em> την εξατομικευμένη ψυχολογική διάγνωση, συμβουλευτική ή θεραπεία.</li>
+                    <li><strong class="text-charcoal font-medium">Πνευματική Ιδιοκτησία:</strong> Όλο το περιεχόμενο αποτελεί πνευματική ιδιοκτησία του Παναγιώτη Τάγαρη και προστατεύεται από τις σχετικές διατάξεις του ελληνικού και διεθνούς δικαίου. Απαγορεύεται η αναπαραγωγή του χωρίς έγγραφη άδεια.</li>
+                    <li><strong class="text-charcoal font-medium">Διαθεσιμότητα Ραντεβού:</strong> Η αναγραφή περί μη διαθεσιμότητας νέων ραντεβού είναι δεσμευτική για την τρέχουσα περίοδο. Ο ιστότοπος δεν φέρει ευθύνη για τυχόν προσωρινή αδυναμία επικοινωνίας.</li>
+                    <li><strong class="text-charcoal font-medium">Εξωτερικοί Σύνδεσμοι:</strong> Σε περίπτωση που υπάρχουν σύνδεσμοι προς τρίτες ιστοσελίδες, δεν φέρουμε ευθύνη για το περιεχόμενο ή την πολιτική απορρήτου αυτών.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-charcoal pt-16 pb-8 border-t border-charcoalLight mt-auto">
         <div class="max-w-6xl mx-auto px-6">
@@ -369,11 +453,11 @@
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-warmBeige/60">
-                <div class="flex gap-4">
-                    <a href="#" class="hover:text-ivory transition-colors">Πολιτική Απορρήτου (GDPR)</a>
-                    <a href="#" class="hover:text-ivory transition-colors">Πολιτική Cookies</a>
-                    <a href="#" class="hover:text-ivory transition-colors">Όροι Χρήσης</a>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-light text-warmBeige/60">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="openModal('modal-privacy')" class="hover:text-ivory transition-colors">Πολιτική Απορρήτου (GDPR)</button>
+                    <button onclick="openModal('modal-cookies')" class="hover:text-ivory transition-colors">Πολιτική Cookies</button>
+                    <button onclick="openModal('modal-terms')" class="hover:text-ivory transition-colors">Όροι Χρήσης</button>
                 </div>
                 <div class="text-center">
                     <p>© 2026 Παναγιώτης Τάγαρης. Με την επιφύλαξη παντός δικαιώματος.</p>
@@ -433,13 +517,36 @@
             lightbox.classList.remove('active');
             setTimeout(() => {
                 lightboxImg.src = '';
-                document.body.style.overflow = '';
+                // Only restore overflow if no legal modals are open
+                if (!document.querySelector('.legal-modal.active')) {
+                    document.body.style.overflow = '';
+                }
             }, 400);
         }
 
+        // Legal Modals Logic
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            // Only restore overflow if lightbox is also closed
+            if (!lightbox.classList.contains('active')) {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Global Escape Key Handler for both Lightbox and Modals
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-                closeLightbox();
+            if (e.key === 'Escape') {
+                if (lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+                document.querySelectorAll('.legal-modal.active').forEach(modal => {
+                    closeModal(modal.id);
+                });
             }
         });
     </script>
