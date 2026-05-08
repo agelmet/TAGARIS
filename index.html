@@ -75,13 +75,13 @@
         .delay-300 { transition-delay: 0.3s; }
 
         /* Elegant Card Styling */
-        .service-card, .article-card, .video-card {
+        .service-card, .video-card {
             background: #ffffff;
             border: 1px solid rgba(214, 207, 196, 0.4);
             border-radius: 12px;
             transition: all 0.4s ease;
         }
-        .service-card:hover, .article-card:hover, .video-card:hover {
+        .service-card:hover, .video-card:hover {
             box-shadow: 0 10px 30px -10px rgba(45, 49, 52, 0.08);
             border-color: rgba(142, 163, 145, 0.6);
             transform: translateY(-3px);
@@ -94,7 +94,7 @@
             transition: max-height 0.4s ease-out, padding 0.4s ease-out;
         }
         .faq-item.active .faq-answer {
-            max-height: 300px; /* arbitrary max-height for transition */
+            max-height: 400px;
             padding-top: 1rem;
         }
         .faq-item.active .faq-icon {
@@ -150,7 +150,7 @@
     <!-- Navigation -->
     <nav class="w-full z-40 bg-ivory/90 backdrop-blur-md sticky top-0 border-b border-warmBeige/30 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="flex flex-col z-10" onclick="window.scrollTo(0,0)">
+            <a href="#" class="flex flex-col z-10" aria-label="Αρχική" onclick="window.scrollTo(0,0)">
                 <span class="text-xl font-serif text-charcoal tracking-wide">ΠΑΝΑΓΙΩΤΗΣ ΤΑΓΑΡΗΣ</span>
                 <span class="text-[0.65rem] uppercase tracking-widest text-charcoalLight font-medium">Ψυχολόγος • Ψυχοθεραπευτής MSc</span>
             </a>
@@ -272,7 +272,7 @@
             
             <div class="lg:col-span-5 relative fade-up">
                 <div class="aspect-[4/5] rounded-xl overflow-hidden bg-white p-2 border border-warmBeige/40 shadow-sm">
-                    <img src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/image_20251025_083901_230_66.jpg" alt="Παναγιώτης Τάγαρης, Ψυχολόγος" class="w-full h-full object-cover rounded-lg filter grayscale-[10%]">
+                    <img loading="lazy" src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/image_20251025_083901_230_66.jpg" alt="Παναγιώτης Τάγαρης, Ψυχολόγος" class="w-full h-full object-cover rounded-lg filter grayscale-[10%]">
                 </div>
             </div>
 
@@ -351,7 +351,7 @@
                 </div>
             </div>
             
-            <!-- Doctoranytime Profiles (No Booking CTA) -->
+            <!-- Doctoranytime Profiles -->
             <div class="mt-16 text-center flex flex-col sm:flex-row justify-center items-center gap-6 fade-up">
                 <a href="https://www.doctoranytime.gr/d/Psychologos/tagaris-panagiotis" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white border border-charcoal text-charcoal rounded-md text-sm font-medium hover:bg-ivory transition-colors duration-300 w-full sm:w-auto">
                     Προφίλ Ψυχολόγου στο doctoranytime
@@ -376,20 +376,20 @@
 
             <!-- Gentle Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <button class="overflow-hidden rounded-lg fade-up focus:outline-none" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-15.jpg')">
-                    <img src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-15.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100">
+                <button class="overflow-hidden rounded-lg fade-up focus:outline-none" aria-label="Προβολή εικόνας χώρου 1" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-15.jpg')">
+                    <img loading="lazy" src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-15.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100">
                 </button>
 
-                <button class="overflow-hidden rounded-lg fade-up delay-100 focus:outline-none" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-20.jpg')">
-                    <img src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-20.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100 object-top">
+                <button class="overflow-hidden rounded-lg fade-up delay-100 focus:outline-none" aria-label="Προβολή εικόνας χώρου 2" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-20.jpg')">
+                    <img loading="lazy" src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/2023-05-20.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100 object-top">
                 </button>
 
-                <button class="overflow-hidden rounded-lg fade-up focus:outline-none" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/taggg.jpg')">
-                    <img src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/taggg.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100">
+                <button class="overflow-hidden rounded-lg fade-up focus:outline-none" aria-label="Προβολή εικόνας χώρου 3" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/taggg.jpg')">
+                    <img loading="lazy" src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/taggg.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100">
                 </button>
 
-                <button class="overflow-hidden rounded-lg fade-up delay-100 focus:outline-none" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/tga.jpg')">
-                    <img src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/tga.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100">
+                <button class="overflow-hidden rounded-lg fade-up delay-100 focus:outline-none" aria-label="Προβολή εικόνας χώρου 4" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/tga.jpg')">
+                    <img loading="lazy" src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/tga.jpg" alt="Στιγμές από τον θεραπευτικό χώρο" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100">
                 </button>
             </div>
         </div>
@@ -404,45 +404,43 @@
                 <p class="text-charcoalLight font-light">Εισηγήσεις γύρω από τη σχολική ψυχολογία, τον εκφοβισμό, την εφηβεία και την πρόληψη.</p>
             </div>
 
-            <!-- Placeholder for Video Grid -->
+            <!-- Video/Event Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Video Card 1 -->
+                
+                <!-- Event 1 -->
                 <div class="video-card overflow-hidden fade-up">
-                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center">
-                        <i data-lucide="play-circle" class="w-12 h-12 text-sage opacity-80"></i>
-                        <!-- Replace with actual YouTube iframe using loading="lazy" -->
-                        <!-- <iframe loading="lazy" src="..." class="absolute inset-0 w-full h-full" allowfullscreen></iframe> -->
+                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center border-b border-warmBeige/30">
+                        <i data-lucide="mic" class="w-12 h-12 text-sage opacity-80"></i>
                     </div>
                     <div class="p-6">
-                        <p class="text-xs text-mutedBlue mb-2 font-medium">Συνέδριο Σχολικής Ψυχολογίας • 2024</p>
-                        <h4 class="text-lg font-serif text-charcoal mb-2">Πρόληψη του Σχολικού Εκφοβισμού</h4>
-                        <p class="text-sm font-light text-charcoalLight line-clamp-3">Εισήγηση σχετικά με τις δυναμικές του σχολικού εκφοβισμού και τους τρόπους παρέμβασης εντός της σχολικής κοινότητας.</p>
+                        <p class="text-xs text-mutedBlue mb-2 font-medium uppercase tracking-wider">4ο Πανελλήνιο Συνέδριο Σχολικής Ψυχολογίας • 2026</p>
+                        <h4 class="text-lg font-serif text-charcoal mb-2 leading-snug">«Το τρίγωνο της σύνδεσης στις ρομαντικές σχέσεις των μικρών ενηλίκων»</h4>
+                        <p class="text-sm font-light text-charcoalLight">και πρόγραμμα δεξιοτήτων σε μαθητές Πρωτοβάθμιας – Δευτεροβάθμιας Εκπαίδευσης.</p>
                     </div>
                 </div>
 
-                <!-- Video Card 2 -->
+                <!-- Event 2 -->
                 <div class="video-card overflow-hidden fade-up delay-100">
-                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center">
-                        <i data-lucide="play-circle" class="w-12 h-12 text-sage opacity-80"></i>
+                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center border-b border-warmBeige/30">
+                        <img loading="lazy" src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/Screenshot_20260508-161709%7E2.png" alt="1ο Διεθνές Συνέδριο Βία κατά των Ανηλίκων" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <p class="text-xs text-mutedBlue mb-2 font-medium">Ημερίδα Ψυχικής Υγείας • 2023</p>
-                        <h4 class="text-lg font-serif text-charcoal mb-2">Η Εφηβεία και οι Προκλήσεις της</h4>
-                        <p class="text-sm font-light text-charcoalLight line-clamp-3">Μια ανάλυση των συναισθηματικών μεταπτώσεων και της σημασίας των ορίων κατά την περίοδο της εφηβείας.</p>
+                        <p class="text-xs text-mutedBlue mb-2 font-medium uppercase tracking-wider">1ο Διεθνές Συνέδριο “Βία κατά των Ανηλίκων” • 2025</p>
+                        <h4 class="text-lg font-serif text-charcoal mb-2 leading-snug">«Διαχείριση αναφοράς περιστατικού στην ψηφιακή πλατφόρμα stop-bullying.gov.gr»</h4>
                     </div>
                 </div>
 
-                <!-- Video Card 3 -->
+                <!-- Event 3 -->
                 <div class="video-card overflow-hidden fade-up delay-200">
-                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center">
-                        <i data-lucide="play-circle" class="w-12 h-12 text-sage opacity-80"></i>
+                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center border-b border-warmBeige/30">
+                         <img loading="lazy" src="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/Screenshot_20260508-161727%7E2.png" alt="Προσεγγίσεις για την Πρόληψη και Αντιμετώπιση της Ενδοσχολικής Βίας" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <p class="text-xs text-mutedBlue mb-2 font-medium">Συμπόσιο Γονέων • 2023</p>
-                        <h4 class="text-lg font-serif text-charcoal mb-2">Βία κατά Ανηλίκων: Κατανόηση & Στήριξη</h4>
-                        <p class="text-sm font-light text-charcoalLight line-clamp-3">Προσέγγιση των μορφών βίας και ο ρόλος της οικογένειας στην αναγνώριση και τη διαχείριση κρίσιμων καταστάσεων.</p>
+                        <p class="text-xs text-mutedBlue mb-2 font-medium uppercase tracking-wider">Προσεγγίσεις για την Πρόληψη & Αντιμετώπιση της Ενδοσχολικής Βίας • 2025</p>
+                        <h4 class="text-lg font-serif text-charcoal mb-2 leading-snug">«Μελέτη περίπτωσης σε Δημοτικό Σχολείο της Δυτικής Αττικής»</h4>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -450,65 +448,14 @@
     <!-- Articles / Blog Section -->
     <section id="blog" class="py-24 px-6 bg-ivory relative">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16 fade-up">
+            <div class="text-center mb-10 fade-up">
                 <span class="text-sage font-medium tracking-widest text-xs uppercase mb-4 block">ΕΝΗΜΕΡΩΣΗ</span>
                 <h2 class="text-3xl font-serif text-charcoal mb-4">Άρθρα Ψυχολογίας</h2>
-                <p class="text-charcoalLight font-light">Ενημερωτικά κείμενα γύρω από ζητήματα ψυχικής υγείας και θεραπείας.</p>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Generating the 10 specified article placeholder cards -->
-                <a href="#" class="article-card p-6 block fade-up group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Τι είναι η Γνωσιακή Συμπεριφορική Θεραπεία (CBT);</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-                
-                <a href="#" class="article-card p-6 block fade-up delay-100 group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Άγχος και κρίσεις πανικού: πώς βοηθά η CBT;</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up delay-200 group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Πότε χρειάζεται να απευθυνθεί κάποιος σε ψυχολόγο;</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Συμβουλευτική γονέων: πότε μπορεί να βοηθήσει;</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up delay-100 group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Σχολικό άγχος σε παιδιά και εφήβους.</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up delay-200 group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Σχολικός εκφοβισμός: τι μπορούν να προσέξουν οι γονείς;</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Online ψυχοθεραπεία: πώς λειτουργεί;</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up delay-100 group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Αυτοεκτίμηση στην εφηβεία.</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up delay-200 group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Burnout και ψυχική εξουθένωση.</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
-                <a href="#" class="article-card p-6 block fade-up group">
-                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Η πρώτη συνεδρία με ψυχολόγο: τι να περιμένει κανείς.</h4>
-                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
-                </a>
-
+            <div class="text-center p-12 bg-white rounded-xl border border-warmBeige/40 shadow-sm fade-up">
+                <i data-lucide="book-open" class="w-8 h-8 text-warmBeige mx-auto mb-4"></i>
+                <p class="text-charcoalLight font-light text-lg">Η ενότητα άρθρων βρίσκεται υπό διαμόρφωση.</p>
             </div>
         </div>
     </section>
@@ -548,6 +495,17 @@
                 <!-- FAQ Item 3 -->
                 <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
                     <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-medium text-charcoal">Μπορώ να επικοινωνήσω για λίστα αναμονής;</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white">
+                        <p class="text-sm font-light text-charcoalLight pb-6">Αυτή την περίοδο δεν λειτουργεί φόρμα επικοινωνίας ή λίστα αναμονής μέσω της ιστοσελίδας. Σε περίπτωση αλλαγής διαθεσιμότητας, θα υπάρξει σχετική ενημέρωση.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
+                    <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
                         <span class="font-medium text-charcoal">Τι συμβαίνει στην πρώτη συνεδρία;</span>
                         <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
                     </button>
@@ -556,7 +514,7 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 4 -->
+                <!-- FAQ Item 5 -->
                 <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
                     <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
                         <span class="font-medium text-charcoal">Πόσο διαρκεί μία συνεδρία;</span>
@@ -567,7 +525,7 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 5 -->
+                <!-- FAQ Item 6 -->
                 <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
                     <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
                         <span class="font-medium text-charcoal">Τι χρειάζεται για μία online συνεδρία;</span>
@@ -578,7 +536,7 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 6 -->
+                <!-- FAQ Item 7 -->
                 <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
                     <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
                         <span class="font-medium text-charcoal">Τι ισχύει με το απόρρητο;</span>
@@ -618,7 +576,7 @@
                     <li><strong class="text-charcoal font-medium">Συλλογή Δεδομένων:</strong> Δεδομένα συλλέγονται μόνο εάν επιλέξετε να επικοινωνήσετε μαζί μας (π.χ. μέσω μελλοντικής φόρμας επικοινωνίας ή email). Αυτά περιλαμβάνουν το ονοματεπώνυμο και τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας.</li>
                     <li><strong class="text-charcoal font-medium">Σκοπός Επεξεργασίας:</strong> Τα στοιχεία σας χρησιμοποιούνται αποκλειστικά για την απάντηση στα αιτήματά σας και τον προγραμματισμό συνεδριών, εφόσον υπάρχει διαθεσιμότητα.</li>
                     <li><strong class="text-charcoal font-medium">Εχεμύθεια & Ασφάλεια:</strong> Ως Ψυχολόγος, ο Παναγιώτης Τάγαρης δεσμεύεται από το <em>επαγγελματικό απόρρητο</em>. Τα δεδομένα σας δεν διαβιβάζονται σε τρίτους, εκτός εάν απαιτείται από τον νόμο.</li>
-                    <li><strong class="text-charcoal font-medium">Τα Δικαιώματά σας:</strong> Έχετε το δικαίωμα πρόσβασης, διόρθωσης ή διαγραφής των δεδομένων σας ανά πάσα στιγμή, στέλνοντας ένα σχετικό αίτημα στο email επικοινωνίας.</li>
+                    <li><strong class="text-charcoal font-medium">Τα Δικαιώματά σας:</strong> Έχετε το δικαίωμα πρόσβασης, διόρθωσης ή διαγραφής των δεδομένων σας ανά πάσα στιγμή, στέλνοντας ένα σχετικό αίτημα μέσω των επίσημων διαθέσιμων τρόπων επικοινωνίας, όταν αυτοί ενεργοποιηθούν στην ιστοσελίδα.</li>
                 </ul>
             </div>
         </div>
@@ -689,7 +647,6 @@
                     <button onclick="openModal('modal-privacy')" class="hover:text-ivory transition-colors">Πολιτική Απορρήτου</button>
                     <button onclick="openModal('modal-cookies')" class="hover:text-ivory transition-colors">Πολιτική Cookies</button>
                     <button onclick="openModal('modal-terms')" class="hover:text-ivory transition-colors">Όροι Χρήσης</button>
-                    <a href="https://www.doctoranytime.gr/d/Psychologos/tagaris-panagiotis" target="_blank" rel="noopener noreferrer" class="hover:text-ivory transition-colors">doctoranytime</a>
                 </div>
                 <div class="text-center lg:text-right">
                     <p>© 2026 Παναγιώτης Τάγαρης. Με την επιφύλαξη παντός δικαιώματος.</p>
@@ -742,13 +699,11 @@
                 const faqItem = button.parentElement;
                 const isActive = faqItem.classList.contains('active');
                 
-                // Close all other items (optional, remove if you want multiple open)
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
                     item.querySelector('.faq-button').setAttribute('aria-expanded', 'false');
                 });
 
-                // Toggle current item
                 if (!isActive) {
                     faqItem.classList.add('active');
                     button.setAttribute('aria-expanded', 'true');
