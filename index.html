@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- SEO & Meta Tags -->
     <title>Παναγιώτης Τάγαρης | Ψυχολόγος – Ψυχοθεραπευτής MSc | CBT</title>
     <meta name="description" content="Ο Παναγιώτης Τάγαρης είναι Ψυχολόγος – Ψυχοθεραπευτής MSc με εκπαίδευση στη Γνωσιακή Συμπεριφορική Θεραπεία (CBT), εμπειρία στη σχολική ψυχολογία και παροχή διαδικτυακών συνεδριών σε ενήλικες, παιδιά και εφήβους.">
-    <meta name="keywords" content="Ψυχολόγος Ψυχοθεραπευτής, Online ψυχολόγος, Γνωσιακή Συμπεριφορική Θεραπεία, CBT ψυχολόγος, Παιδοψυχολόγος, Συμβουλευτική γονέων, Σχολική ψυχολογία, Ψυχολόγος Νέα Φιλαδέλφεια, Ψυχολόγος Νέο Ηράκλειο">
+    <meta name="keywords" content="Ψυχολόγος Ψυχοθεραπευτής, Online ψυχολόγος, Γνωσιακή Συμπεριφορική Θεραπεία, CBT ψυχολόγος, Παιδοψυχολόγος, Συμβουλευτική γονέων, Σχολική ψυχολογία">
     <meta name="author" content="Advon Media">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Παναγιώτης Τάγαρης | Ψυχολόγος – Ψυχοθεραπευτής MSc">
+    <meta property="og:description" content="Γνωσιακή Συμπεριφορική Θεραπεία (CBT) για ενήλικες, παιδιά και εφήβους. Διαδικτυακές συνεδρίες.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tagaris-psychologist.gr">
+    <meta property="og:image" content="https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/image_20251025_083901_230_66.jpg">
+    <meta property="og:locale" content="el_GR">
+
     <!-- Typographic Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%232D3134%22>ΠΤ</text></svg>">
 
@@ -66,16 +75,30 @@
         .delay-300 { transition-delay: 0.3s; }
 
         /* Elegant Card Styling */
-        .service-card {
+        .service-card, .article-card, .video-card {
             background: #ffffff;
             border: 1px solid rgba(214, 207, 196, 0.4);
             border-radius: 12px;
             transition: all 0.4s ease;
         }
-        .service-card:hover {
+        .service-card:hover, .article-card:hover, .video-card:hover {
             box-shadow: 0 10px 30px -10px rgba(45, 49, 52, 0.08);
             border-color: rgba(142, 163, 145, 0.6);
             transform: translateY(-3px);
+        }
+
+        /* FAQ Accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px; /* arbitrary max-height for transition */
+            padding-top: 1rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
         }
 
         /* Lightbox */
@@ -100,7 +123,6 @@
         .legal-modal.active .legal-modal-content {
             transform: scale(1) translateY(0);
         }
-        /* Custom scrollbar for modals */
         .modal-scroll::-webkit-scrollbar { width: 6px; }
         .modal-scroll::-webkit-scrollbar-track { background: transparent; }
         .modal-scroll::-webkit-scrollbar-thumb { background: #D6CFC4; border-radius: 4px; }
@@ -113,6 +135,7 @@
       "@type": "ProfessionalService",
       "name": "Παναγιώτης Τάγαρης | Ψυχολόγος – Ψυχοθεραπευτής MSc",
       "description": "Ψυχολόγος – Ψυχοθεραπευτής MSc. Γνωσιακή Συμπεριφορική Θεραπεία (CBT) για ενήλικες, παιδιά και εφήβους. Διαδικτυακές συνεδρίες.",
+      "image": "https://raw.githubusercontent.com/agelmet/TAGARIS/refs/heads/main/image_20251025_083901_230_66.jpg",
       "knowsAbout": ["Γνωσιακή Συμπεριφορική Θεραπεία", "Ψυχοθεραπεία", "Παιδοψυχολογία", "Συμβουλευτική Γονέων", "Σχολική Ψυχολογία"]
     }
     </script>
@@ -121,7 +144,7 @@
 
     <!-- Availability Notice Banner -->
     <div class="bg-charcoal text-ivory py-3 px-6 text-center text-sm font-light tracking-wide z-50 relative">
-        Τρέχουσα διαθεσιμότητα: Δεν υπάρχει δυνατότητα νέων ραντεβού αυτή την περίοδο. Σε περίπτωση αλλαγής διαθεσιμότητας, η ιστοσελίδα θα ενημερωθεί με σχετική φόρμα επικοινωνίας.
+        Τρέχουσα διαθεσιμότητα: Δεν υπάρχουν διαθέσιμα νέα ραντεβού αυτή την περίοδο. Σε περίπτωση αλλαγής διαθεσιμότητας, η ιστοσελίδα θα ενημερωθεί σχετικά.
     </div>
 
     <!-- Navigation -->
@@ -132,14 +155,17 @@
                 <span class="text-[0.65rem] uppercase tracking-widest text-charcoalLight font-medium">Ψυχολόγος • Ψυχοθεραπευτής MSc</span>
             </a>
             
-            <div class="hidden lg:flex items-center space-x-10">
+            <div class="hidden lg:flex items-center space-x-8">
                 <a href="#approach" class="text-sm font-medium text-charcoalLight hover:text-sage transition-colors">Προσέγγιση</a>
                 <a href="#about" class="text-sm font-medium text-charcoalLight hover:text-sage transition-colors">Βιογραφικό</a>
                 <a href="#services" class="text-sm font-medium text-charcoalLight hover:text-sage transition-colors">Υπηρεσίες</a>
                 <a href="#space" class="text-sm font-medium text-charcoalLight hover:text-sage transition-colors">Χώρος</a>
+                <a href="#speeches" class="text-sm font-medium text-charcoalLight hover:text-sage transition-colors">Ομιλίες</a>
+                <a href="#faq" class="text-sm font-medium text-charcoalLight hover:text-sage transition-colors">Συχνές Ερωτήσεις</a>
+                <a href="#blog" class="text-sm font-medium text-charcoalLight hover:text-sage transition-colors">Άρθρα</a>
             </div>
 
-            <button class="lg:hidden text-charcoal focus:outline-none z-10" id="mobile-menu-btn">
+            <button class="lg:hidden text-charcoal focus:outline-none z-10" aria-label="Μενού" id="mobile-menu-btn">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
@@ -150,6 +176,9 @@
             <a href="#about" class="text-base font-medium text-charcoal mobile-link">Βιογραφικό</a>
             <a href="#services" class="text-base font-medium text-charcoal mobile-link">Υπηρεσίες</a>
             <a href="#space" class="text-base font-medium text-charcoal mobile-link">Χώρος</a>
+            <a href="#speeches" class="text-base font-medium text-charcoal mobile-link">Ομιλίες</a>
+            <a href="#faq" class="text-base font-medium text-charcoal mobile-link">Συχνές Ερωτήσεις</a>
+            <a href="#blog" class="text-base font-medium text-charcoal mobile-link">Άρθρα</a>
         </div>
     </nav>
 
@@ -194,16 +223,16 @@
             </div>
 
             <div class="mt-24">
-                <h3 class="text-2xl md:text-3xl font-serif text-center text-charcoal mb-16 fade-up">Θεραπεία με δομή, κατανόηση και πράξη</h3>
+                <h3 class="text-2xl md:text-3xl font-serif text-center text-charcoal mb-16 fade-up">Θεραπευτική διαδικασία με δομή, κατανόηση και συνεργασία</h3>
                 
                 <div class="grid md:grid-cols-3 gap-10">
                     <div class="fade-up service-card p-8">
                         <div class="w-12 h-12 rounded-full bg-ivory border border-warmBeige flex items-center justify-center text-sage mb-6">
                             <i data-lucide="book-open" class="w-5 h-5"></i>
                         </div>
-                        <h4 class="text-lg font-serif font-medium text-charcoal mb-4">Κατανόηση</h4>
+                        <h4 class="text-lg font-serif font-medium text-charcoal mb-4">Κατανόηση της δυσκολίας</h4>
                         <p class="text-charcoalLight font-light leading-relaxed text-sm">
-                            Πρώτο βήμα είναι να κατανοηθεί τι συμβαίνει και πώς η δυσκολία επηρεάζει τη ζωή του ατόμου, χωρίς κριτική διάθεση.
+                            Στην αρχή της θεραπευτικής διαδικασίας δίνεται έμφαση στην κατανόηση του αιτήματος, των συμπτωμάτων, του προσωπικού ιστορικού και του τρόπου με τον οποίο η δυσκολία επηρεάζει την καθημερινότητα.
                         </p>
                     </div>
                     
@@ -211,9 +240,9 @@
                         <div class="w-12 h-12 rounded-full bg-ivory border border-warmBeige flex items-center justify-center text-sage mb-6">
                             <i data-lucide="heart-handshake" class="w-5 h-5"></i>
                         </div>
-                        <h4 class="text-lg font-serif font-medium text-charcoal mb-4">Σύνδεση</h4>
+                        <h4 class="text-lg font-serif font-medium text-charcoal mb-4">Συνεργατικός σχεδιασμός</h4>
                         <p class="text-charcoalLight font-light leading-relaxed text-sm">
-                            Η θεραπευτική σχέση βασίζεται στην εμπιστοσύνη, τη συνεργασία και τον απόλυτο σεβασμό στον προσωπικό ρυθμό του ανθρώπου.
+                            Η θεραπεία βασίζεται σε μια συνεργατική σχέση, με σαφείς στόχους, σεβασμό στον ρυθμό του θεραπευόμενου και προσαρμογή στις ανάγκες του κάθε ανθρώπου.
                         </p>
                     </div>
 
@@ -221,17 +250,17 @@
                         <div class="w-12 h-12 rounded-full bg-ivory border border-warmBeige flex items-center justify-center text-sage mb-6">
                             <i data-lucide="arrow-right-circle" class="w-5 h-5"></i>
                         </div>
-                        <h4 class="text-lg font-serif font-medium text-charcoal mb-4">Αλλαγή</h4>
+                        <h4 class="text-lg font-serif font-medium text-charcoal mb-4">Σταδιακή αλλαγή</h4>
                         <p class="text-charcoalLight font-light leading-relaxed text-sm">
-                            Αναζήτηση και σταδιακή εφαρμογή πιο λειτουργικών τρόπων σκέψης, συμπεριφοράς και διαχείρισης των συναισθημάτων στην καθημερινότητα.
+                            Μέσα από ψυχοεκπαίδευση, διερεύνηση σκέψεων και συμπεριφορών, καθώς και πρακτικές ασκήσεις, ο θεραπευόμενος υποστηρίζεται στην ανάπτυξη πιο λειτουργικών τρόπων διαχείρισης.
                         </p>
                     </div>
                 </div>
             </div>
             
             <div class="mt-20 p-8 bg-ivory rounded-xl border border-warmBeige/40 text-center fade-up">
-                <p class="text-charcoalLight text-sm leading-relaxed italic">
-                    "Η Γνωσιακή Συμπεριφορική Θεραπεία μπορεί να βοηθήσει το άτομο να κατανοήσει τη σχέση ανάμεσα στις σκέψεις, τα συναισθήματα και τις συμπεριφορές του, αναπτύσσοντας πιο λειτουργικούς τρόπους διαχείρισης των δυσκολιών."
+                <p class="text-charcoalLight text-sm leading-relaxed italic max-w-4xl mx-auto">
+                    "Η Γνωσιακή Συμπεριφορική Θεραπεία (CBT) αποτελεί μια δομημένη και συνεργατική θεραπευτική προσέγγιση, η οποία βοηθά το άτομο να κατανοήσει τη σχέση ανάμεσα στις σκέψεις, τα συναισθήματα, το σώμα και τη συμπεριφορά του. Μέσα από τη θεραπευτική διαδικασία, διερευνώνται δυσλειτουργικά μοτίβα και αναπτύσσονται πιο λειτουργικοί τρόποι διαχείρισης των δυσκολιών της καθημερινότητας."
                 </p>
             </div>
         </div>
@@ -255,10 +284,10 @@
                 
                 <div class="space-y-6 text-charcoalLight text-base font-light leading-relaxed">
                     <p>
-                        Ο Παναγιώτης Τάγαρης είναι αδειούχος Ψυχολόγος. Η ακαδημαϊκή του διαδρομή γεφυρώνει συστηματικά τους τομείς της Ψυχολογίας και της Εκπαίδευσης. Είναι κάτοχος <strong>Πτυχίου Ψυχολογίας</strong> και <strong>Πτυχίου Παιδαγωγικού Τμήματος Δημοτικής Εκπαίδευσης</strong>.
+                        Ο Παναγιώτης Τάγαρης είναι πτυχιούχος ψυχολόγος με άδεια άσκησης επαγγέλματος. Η ακαδημαϊκή του διαδρομή γεφυρώνει συστηματικά τους τομείς της Ψυχολογίας και της Εκπαίδευσης. Είναι κάτοχος <strong>Πτυχίου Ψυχολογίας</strong> και <strong>Πτυχίου Παιδαγωγικού Τμήματος Δημοτικής Εκπαίδευσης</strong>.
                     </p>
                     <p>
-                        Έχει διευρύνει την επιστημονική του εξειδίκευση αποκτώντας διπλό Μεταπτυχιακό τίτλο: <strong>MSc στη Σχολική Συμβουλευτική και Καθοδήγηση</strong> και <strong>MSc στις Επιστήμες της Αγωγής</strong>. Παράλληλα, έχει ολοκληρώσει πολυετή, πιστοποιημένη εκπαίδευση στη <strong>Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</strong> για παιδιά, εφήβους και ενήλικες.
+                        Είναι κάτοχος δύο μεταπτυχιακών τίτλων σπουδών: στη <strong>Σχολική Συμβουλευτική και Καθοδήγηση</strong> και στις <strong>Επιστήμες της Αγωγής</strong>. Παράλληλα, έχει λάβει εξειδικευμένη εκπαίδευση στη <strong>Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</strong> παιδιών, εφήβων και ενηλίκων στην Εταιρεία Γνωσιακών και Συμπεριφορικών Σπουδών, φορέα αναγνωρισμένο από την European Association for Behavioural and Cognitive Therapies (EABCT).
                     </p>
                     <p>
                         Η κλινική και συμβουλευτική του εμπειρία προέρχεται από την ενεργή παρουσία του στο πεδίο. Έχει εργαστεί εκτενώς σε σχολικά περιβάλλοντα, ΚΕ.Δ.Α.Σ.Υ., Σχολεία Δεύτερης Ευκαιρίας (Σ.Δ.Ε.) καθώς και σε εξειδικευμένες δομές ψυχικής υγείας, παρέχοντας υποστήριξη σε μαθητές, γονείς και ενήλικες για τη διαχείριση απαιτητικών ψυχοκοινωνικών καταστάσεων.
@@ -282,7 +311,7 @@
                 <div class="service-card p-10 fade-up">
                     <h3 class="text-xl font-serif text-charcoal mb-4 border-b border-warmBeige/30 pb-3">Ψυχοθεραπεία Ενηλίκων</h3>
                     <p class="text-charcoalLight font-light leading-relaxed text-sm">
-                        Διαχείριση ζητημάτων όπως το άγχος, η κατάθλιψη, η Ιδεοψυχαναγκαστική Διαταραχή (OCD), οι ειδικές φοβίες, το μετατραυματικό στρες (PTSD), η διαχείριση πένθους και το σύνδρομο εργασιακής εξουθένωσης (burnout).
+                        Η ψυχοθεραπεία ενηλίκων παρέχει ένα ασφαλές πλαίσιο για τη διαχείριση προκλήσεων όπως το άγχος, οι κρίσεις πανικού, η κατάθλιψη, η Ιδεοψυχαναγκαστική Διαταραχή (OCD) και οι ειδικές φοβίες. Μέσα από τη θεραπευτική συνεργασία, αντιμετωπίζονται ζητήματα πένθους, χαμηλής αυτοεκτίμησης, συνδρόμου επαγγελματικής εξουθένωσης (burnout) και διαπροσωπικών δυσκολιών, στοχεύοντας στην ενίσχυση της λειτουργικότητας.
                     </p>
                 </div>
 
@@ -290,7 +319,7 @@
                 <div class="service-card p-10 fade-up delay-100">
                     <h3 class="text-xl font-serif text-charcoal mb-4 border-b border-warmBeige/30 pb-3">Παιδοψυχολογία & Εφηβεία</h3>
                     <p class="text-charcoalLight font-light leading-relaxed text-sm">
-                        Ψυχοθεραπευτική υποστήριξη παιδιών και εφήβων. Εστίαση σε δυσκολίες προσαρμογής, διαχείριση συμπεριφοράς, σχολικό άγχος και πλαισίωση νευροαναπτυξιακών προκλήσεων, με σεβασμό στην ανάπτυξη του ατόμου.
+                        Η ψυχοθεραπευτική υποστήριξη παιδιών και εφήβων εστιάζει στη διαχείριση συναισθηματικών και συμπεριφορικών δυσκολιών, προσαρμοσμένη στο αναπτυξιακό στάδιο του ατόμου. Διερευνώνται ζητήματα όπως το σχολικό άγχος, οι δυσκολίες σχολικής προσαρμογής, η διαχείριση κοινωνικών σχέσεων, η ανάπτυξη της αυτοεκτίμησης και η πρόληψη ή αντιμετώπιση του σχολικού εκφοβισμού.
                     </p>
                 </div>
 
@@ -298,7 +327,7 @@
                 <div class="service-card p-10 fade-up">
                     <h3 class="text-xl font-serif text-charcoal mb-4 border-b border-warmBeige/30 pb-3">Συμβουλευτική Γονέων</h3>
                     <p class="text-charcoalLight font-light leading-relaxed text-sm">
-                        Υποστήριξη του γονεϊκού ρόλου. Ενίσχυση των δεξιοτήτων επικοινωνίας, λειτουργική οριοθέτηση στο οικογενειακό πλαίσιο και καθοδήγηση για τη διαχείριση κρίσεων στο σπίτι.
+                        Η συμβουλευτική γονέων αποτελεί μια υποστηρικτική διαδικασία που στοχεύει στην ενδυνάμωση του γονεϊκού ρόλου. Επικεντρώνεται στην κατανόηση της συμπεριφοράς του παιδιού ή του εφήβου, στη θέσπιση λειτουργικών ορίων, στη βελτίωση της επικοινωνίας εντός της οικογένειας και στη διαχείριση ευρύτερων οικογενειακών δυσκολιών σε κλίμα αποδοχής.
                     </p>
                 </div>
 
@@ -306,7 +335,7 @@
                 <div class="service-card p-10 fade-up delay-100">
                     <h3 class="text-xl font-serif text-charcoal mb-4 border-b border-warmBeige/30 pb-3">Σχολική Ψυχολογία</h3>
                     <p class="text-charcoalLight font-light leading-relaxed text-sm">
-                        Αξιοποίηση της ακαδημαϊκής εξειδίκευσης για τη στήριξη μαθητών με μαθησιακές δυσκολίες, τη διαχείριση φαινομένων σχολικού εκφοβισμού και την παρέμβαση σε κρίσεις εντός του εκπαιδευτικού πλαισίου.
+                        Αξιοποιώντας τις αρχές της σχολικής ψυχολογίας, παρέχεται υποστήριξη για την πλαισίωση μαθησιακών δυσκολιών. Βασικός άξονας είναι η διευκόλυνση της επικοινωνίας και της συνεργασίας ανάμεσα στο σχολείο και την οικογένεια, καθώς και η επιστημονικά τεκμηριωμένη διαχείριση κρίσεων που μπορεί να προκύψουν εντός της σχολικής κοινότητας.
                     </p>
                 </div>
 
@@ -317,15 +346,19 @@
                         <h3 class="text-xl font-serif text-charcoal">Διαδικτυακές Συνεδρίες</h3>
                     </div>
                     <p class="text-charcoalLight font-light leading-relaxed text-sm mb-4">
-                        Όλες οι συνεδρίες πραγματοποιούνται <strong>αποκλειστικά διαδικτυακά</strong>, προσφέροντας προσβασιμότητα και ασφάλεια από τον δικό σας χώρο.
+                        Στην παρούσα φάση οι συνεδρίες πραγματοποιούνται διαδικτυακά, προσφέροντας προσβασιμότητα και ασφάλεια. Η διαδικτυακή CBT έχει μελετηθεί ερευνητικά και μπορεί, σε πολλές περιπτώσεις, να αποτελέσει αποτελεσματική μορφή θεραπευτικής υποστήριξης, όταν εφαρμόζεται με κατάλληλο θεραπευτικό πλαίσιο.
                     </p>
-                    <ul class="text-sm font-light text-charcoalLight space-y-2 list-disc list-inside">
-                        <li><strong>Αποτελεσματικότητα:</strong> Η επιστημονική έρευνα επιβεβαιώνει πως η διαδικτυακή CBT είναι εξίσου αποτελεσματική με τη δια ζώσης.</li>
-                        <li><strong>Διαδικασία:</strong> Πραγματοποιούνται μέσω ασφαλών πλατφορμών τηλεδιάσκεψης με προγραμματισμένο ραντεβού.</li>
-                        <li><strong>Απόρρητο:</strong> Τηρούνται αυστηρά όλοι οι κανόνες εμπιστευτικότητας και δεοντολογίας, ακριβώς όπως σε έναν φυσικό χώρο.</li>
-                    </ul>
                 </div>
-
+            </div>
+            
+            <!-- Doctoranytime Profiles (No Booking CTA) -->
+            <div class="mt-16 text-center flex flex-col sm:flex-row justify-center items-center gap-6 fade-up">
+                <a href="https://www.doctoranytime.gr/d/Psychologos/tagaris-panagiotis" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white border border-charcoal text-charcoal rounded-md text-sm font-medium hover:bg-ivory transition-colors duration-300 w-full sm:w-auto">
+                    Προφίλ Ψυχολόγου στο doctoranytime
+                </a>
+                <a href="https://www.doctoranytime.gr/d/Paidopsychologos/tagaris-panagiotis-2" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white border border-charcoal text-charcoal rounded-md text-sm font-medium hover:bg-ivory transition-colors duration-300 w-full sm:w-auto">
+                    Προφίλ Παιδοψυχολόγου στο doctoranytime
+                </a>
             </div>
         </div>
     </section>
@@ -337,7 +370,7 @@
                 <h2 class="text-3xl font-serif text-charcoal mb-4">Ο θεραπευτικός χώρος</h2>
                 <p class="text-charcoalLight font-light text-sm max-w-2xl mx-auto bg-white p-4 border border-warmBeige/30 rounded-md">
                     <i data-lucide="info" class="w-4 h-4 inline-block mb-1 text-mutedBlue mr-1"></i>
-                    Οι φωτογραφίες αποτυπώνουν έναν χώρο ηρεμίας, ασφάλειας και ιδιωτικότητας. <strong>Στην παρούσα φάση, όλες οι συνεδρίες πραγματοποιούνται διαδικτυακά.</strong>
+                    Οι φωτογραφίες αποτυπώνουν έναν χώρο ηρεμίας, ασφάλειας και ιδιωτικότητας. <strong>Στην παρούσα φάση, οι συνεδρίες πραγματοποιούνται διαδικτυακά.</strong>
                 </p>
             </div>
 
@@ -362,9 +395,207 @@
         </div>
     </section>
 
+    <!-- Speeches & Conferences Section -->
+    <section id="speeches" class="py-24 px-6 bg-white border-y border-warmBeige/20 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-sage font-medium tracking-widest text-xs uppercase mb-4 block">ΠΑΡΟΥΣΙΕΣ</span>
+                <h2 class="text-3xl font-serif text-charcoal mb-4">Ομιλίες και Συνέδρια</h2>
+                <p class="text-charcoalLight font-light">Εισηγήσεις γύρω από τη σχολική ψυχολογία, τον εκφοβισμό, την εφηβεία και την πρόληψη.</p>
+            </div>
+
+            <!-- Placeholder for Video Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Card 1 -->
+                <div class="video-card overflow-hidden fade-up">
+                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center">
+                        <i data-lucide="play-circle" class="w-12 h-12 text-sage opacity-80"></i>
+                        <!-- Replace with actual YouTube iframe using loading="lazy" -->
+                        <!-- <iframe loading="lazy" src="..." class="absolute inset-0 w-full h-full" allowfullscreen></iframe> -->
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-mutedBlue mb-2 font-medium">Συνέδριο Σχολικής Ψυχολογίας • 2024</p>
+                        <h4 class="text-lg font-serif text-charcoal mb-2">Πρόληψη του Σχολικού Εκφοβισμού</h4>
+                        <p class="text-sm font-light text-charcoalLight line-clamp-3">Εισήγηση σχετικά με τις δυναμικές του σχολικού εκφοβισμού και τους τρόπους παρέμβασης εντός της σχολικής κοινότητας.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card overflow-hidden fade-up delay-100">
+                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center">
+                        <i data-lucide="play-circle" class="w-12 h-12 text-sage opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-mutedBlue mb-2 font-medium">Ημερίδα Ψυχικής Υγείας • 2023</p>
+                        <h4 class="text-lg font-serif text-charcoal mb-2">Η Εφηβεία και οι Προκλήσεις της</h4>
+                        <p class="text-sm font-light text-charcoalLight line-clamp-3">Μια ανάλυση των συναισθηματικών μεταπτώσεων και της σημασίας των ορίων κατά την περίοδο της εφηβείας.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card overflow-hidden fade-up delay-200">
+                    <div class="aspect-video bg-warmBeige/30 relative flex items-center justify-center">
+                        <i data-lucide="play-circle" class="w-12 h-12 text-sage opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-mutedBlue mb-2 font-medium">Συμπόσιο Γονέων • 2023</p>
+                        <h4 class="text-lg font-serif text-charcoal mb-2">Βία κατά Ανηλίκων: Κατανόηση & Στήριξη</h4>
+                        <p class="text-sm font-light text-charcoalLight line-clamp-3">Προσέγγιση των μορφών βίας και ο ρόλος της οικογένειας στην αναγνώριση και τη διαχείριση κρίσιμων καταστάσεων.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles / Blog Section -->
+    <section id="blog" class="py-24 px-6 bg-ivory relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-sage font-medium tracking-widest text-xs uppercase mb-4 block">ΕΝΗΜΕΡΩΣΗ</span>
+                <h2 class="text-3xl font-serif text-charcoal mb-4">Άρθρα Ψυχολογίας</h2>
+                <p class="text-charcoalLight font-light">Ενημερωτικά κείμενα γύρω από ζητήματα ψυχικής υγείας και θεραπείας.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Generating the 10 specified article placeholder cards -->
+                <a href="#" class="article-card p-6 block fade-up group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Τι είναι η Γνωσιακή Συμπεριφορική Θεραπεία (CBT);</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+                
+                <a href="#" class="article-card p-6 block fade-up delay-100 group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Άγχος και κρίσεις πανικού: πώς βοηθά η CBT;</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up delay-200 group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Πότε χρειάζεται να απευθυνθεί κάποιος σε ψυχολόγο;</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Συμβουλευτική γονέων: πότε μπορεί να βοηθήσει;</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up delay-100 group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Σχολικό άγχος σε παιδιά και εφήβους.</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up delay-200 group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Σχολικός εκφοβισμός: τι μπορούν να προσέξουν οι γονείς;</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Online ψυχοθεραπεία: πώς λειτουργεί;</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up delay-100 group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Αυτοεκτίμηση στην εφηβεία.</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up delay-200 group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Burnout και ψυχική εξουθένωση.</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+                <a href="#" class="article-card p-6 block fade-up group">
+                    <h4 class="text-md font-serif text-charcoal group-hover:text-sage transition-colors mb-3">Η πρώτη συνεδρία με ψυχολόγο: τι να περιμένει κανείς.</h4>
+                    <p class="text-sm font-light text-charcoalLight">Διαβάστε το άρθρο <span class="ml-1 text-sage">&rarr;</span></p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-white border-y border-warmBeige/20 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl font-serif text-charcoal mb-4">Συχνές Ερωτήσεις</h2>
+                <p class="text-charcoalLight font-light">Πληροφορίες σχετικά με τη θεραπευτική διαδικασία και το πλαίσιο συνεργασίας.</p>
+            </div>
+
+            <div class="space-y-4 fade-up">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
+                    <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-medium text-charcoal">Πραγματοποιούνται οι συνεδρίες διαδικτυακά;</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white">
+                        <p class="text-sm font-light text-charcoalLight pb-6">Ναι, στην παρούσα φάση οι συνεδρίες πραγματοποιούνται αποκλειστικά διαδικτυακά, με σεβασμό στην ιδιωτικότητα, τη συνέπεια και το θεραπευτικό πλαίσιο.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
+                    <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-medium text-charcoal">Υπάρχει διαθεσιμότητα νέων ραντεβού;</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white">
+                        <p class="text-sm font-light text-charcoalLight pb-6">Αυτή την περίοδο δεν υπάρχει δυνατότητα νέων ραντεβού. Σε περίπτωση αλλαγής διαθεσιμότητας, η ιστοσελίδα θα ενημερωθεί σχετικά.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
+                    <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-medium text-charcoal">Τι συμβαίνει στην πρώτη συνεδρία;</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white">
+                        <p class="text-sm font-light text-charcoalLight pb-6">Η πρώτη συνεδρία έχει διερευνητικό χαρακτήρα. Στόχος είναι να κατανοηθεί το αίτημα, το πλαίσιο της δυσκολίας και οι ανάγκες του ανθρώπου που ζητά υποστήριξη.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
+                    <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-medium text-charcoal">Πόσο διαρκεί μία συνεδρία;</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white">
+                        <p class="text-sm font-light text-charcoalLight pb-6">Η διάρκεια μιας συνεδρίας καθορίζεται με βάση το θεραπευτικό πλαίσιο και συμφωνείται κατά την έναρξη της συνεργασίας.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
+                    <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-medium text-charcoal">Τι χρειάζεται για μία online συνεδρία;</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white">
+                        <p class="text-sm font-light text-charcoalLight pb-6">Απαιτείται ένας ήσυχος και ιδιωτικός χώρος, σταθερή σύνδεση στο διαδίκτυο και συσκευή με κάμερα και μικρόφωνο.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border border-warmBeige/40 rounded-lg overflow-hidden bg-ivory/50">
+                    <button class="faq-button w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-medium text-charcoal">Τι ισχύει με το απόρρητο;</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-white">
+                        <p class="text-sm font-light text-charcoalLight pb-6">Η θεραπευτική διαδικασία διέπεται από το επαγγελματικό απόρρητο και τους κανόνες δεοντολογίας του επαγγέλματος.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Custom Lightbox -->
     <div id="lightbox" class="fixed inset-0 z-[100] bg-charcoal/95 flex items-center justify-center" onclick="closeLightbox()">
-        <button class="absolute top-6 right-6 text-ivory hover:text-white transition-colors focus:outline-none">
+        <button class="absolute top-6 right-6 text-ivory hover:text-white transition-colors focus:outline-none" aria-label="Κλείσιμο προβολής">
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
         <img id="lightbox-img" src="" alt="Προβολή Εικόνας" class="max-w-[90vw] max-h-[90vh] object-contain rounded-sm shadow-lg" onclick="event.stopPropagation()">
@@ -373,11 +604,11 @@
     <!-- Modals for Legal Pages -->
     
     <!-- Privacy Policy Modal -->
-    <div id="modal-privacy" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-privacy')">
+    <div id="modal-privacy" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-privacy')" aria-hidden="true">
         <div class="legal-modal-content bg-ivory w-full max-w-2xl max-h-[90vh] flex flex-col rounded-xl shadow-2xl relative" onclick="event.stopPropagation()">
             <div class="flex items-center justify-between p-6 border-b border-warmBeige/40 shrink-0">
                 <h3 class="text-2xl font-serif text-charcoal">Πολιτική Απορρήτου (GDPR)</h3>
-                <button onclick="closeModal('modal-privacy')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none">
+                <button onclick="closeModal('modal-privacy')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none" aria-label="Κλείσιμο">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
@@ -394,11 +625,11 @@
     </div>
 
     <!-- Cookies Policy Modal -->
-    <div id="modal-cookies" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-cookies')">
+    <div id="modal-cookies" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-cookies')" aria-hidden="true">
         <div class="legal-modal-content bg-ivory w-full max-w-2xl max-h-[90vh] flex flex-col rounded-xl shadow-2xl relative" onclick="event.stopPropagation()">
             <div class="flex items-center justify-between p-6 border-b border-warmBeige/40 shrink-0">
                 <h3 class="text-2xl font-serif text-charcoal">Πολιτική Cookies</h3>
-                <button onclick="closeModal('modal-cookies')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none">
+                <button onclick="closeModal('modal-cookies')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none" aria-label="Κλείσιμο">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
@@ -416,11 +647,11 @@
     </div>
 
     <!-- Terms of Use Modal -->
-    <div id="modal-terms" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-terms')">
+    <div id="modal-terms" class="legal-modal fixed inset-0 z-[200] bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6" onclick="closeModal('modal-terms')" aria-hidden="true">
         <div class="legal-modal-content bg-ivory w-full max-w-2xl max-h-[90vh] flex flex-col rounded-xl shadow-2xl relative" onclick="event.stopPropagation()">
             <div class="flex items-center justify-between p-6 border-b border-warmBeige/40 shrink-0">
                 <h3 class="text-2xl font-serif text-charcoal">Όροι Χρήσης</h3>
-                <button onclick="closeModal('modal-terms')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none">
+                <button onclick="closeModal('modal-terms')" class="text-charcoalLight hover:text-charcoal transition-colors focus:outline-none" aria-label="Κλείσιμο">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
@@ -448,18 +679,19 @@
                 
                 <div class="text-center md:text-right max-w-sm">
                     <p class="text-warmBeige/80 text-sm font-light leading-relaxed">
-                        Η παρούσα ιστοσελίδα έχει αποκλειστικά ενημερωτικό χαρακτήρα και δεν υποκαθιστά την εξατομικευμένη ψυχολογική εκτίμηση ή θεραπεία. 
+                        Η παρούσα ιστοσελίδα έχει αποκλειστικά ενημερωτικό χαρακτήρα και δεν υποκαθιστά την εξατομικευμένη ψυχολογική εκτίμηση ή θεραπευτική σχέση. 
                     </p>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-light text-warmBeige/60">
-                <div class="flex flex-wrap justify-center gap-4">
-                    <button onclick="openModal('modal-privacy')" class="hover:text-ivory transition-colors">Πολιτική Απορρήτου (GDPR)</button>
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-8 text-xs font-light text-warmBeige/60">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button onclick="openModal('modal-privacy')" class="hover:text-ivory transition-colors">Πολιτική Απορρήτου</button>
                     <button onclick="openModal('modal-cookies')" class="hover:text-ivory transition-colors">Πολιτική Cookies</button>
                     <button onclick="openModal('modal-terms')" class="hover:text-ivory transition-colors">Όροι Χρήσης</button>
+                    <a href="https://www.doctoranytime.gr/d/Psychologos/tagaris-panagiotis" target="_blank" rel="noopener noreferrer" class="hover:text-ivory transition-colors">doctoranytime</a>
                 </div>
-                <div class="text-center">
+                <div class="text-center lg:text-right">
                     <p>© 2026 Παναγιώτης Τάγαρης. Με την επιφύλαξη παντός δικαιώματος.</p>
                     <p class="mt-1">
                         Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-warmBeige hover:text-ivory font-medium transition-colors">Advon Media</a>
@@ -503,6 +735,27 @@
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+        // FAQ Accordion Logic
+        const faqButtons = document.querySelectorAll('.faq-button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other items (optional, remove if you want multiple open)
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-button').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
         // Lightbox Logic
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -517,7 +770,6 @@
             lightbox.classList.remove('active');
             setTimeout(() => {
                 lightboxImg.src = '';
-                // Only restore overflow if no legal modals are open
                 if (!document.querySelector('.legal-modal.active')) {
                     document.body.style.overflow = '';
                 }
@@ -527,18 +779,19 @@
         // Legal Modals Logic
         function openModal(id) {
             document.getElementById(id).classList.add('active');
+            document.getElementById(id).setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal(id) {
             document.getElementById(id).classList.remove('active');
-            // Only restore overflow if lightbox is also closed
+            document.getElementById(id).setAttribute('aria-hidden', 'true');
             if (!lightbox.classList.contains('active')) {
                 document.body.style.overflow = '';
             }
         }
 
-        // Global Escape Key Handler for both Lightbox and Modals
+        // Global Escape Key Handler for Lightbox and Modals
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 if (lightbox.classList.contains('active')) {
